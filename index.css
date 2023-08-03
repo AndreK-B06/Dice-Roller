@@ -1,3 +1,12 @@
+/*    
+collors
+#023e8a  = dark blue
+#219ebc = medium blue
+#8ecae6 = medium light blue
+aqua = light blue
+
+*/
+
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", Arial,
     sans-serif;
@@ -13,7 +22,8 @@ body {
 ===========================================
 ===========================================*/
 .Headder {
-  background-color: #fb8500;
+  background-color: #023e8a;
+  padding: 10px;
 }
 /*=========================================
 ===========================================
@@ -23,7 +33,7 @@ body {
 
 #hero {
   border: 0px;
-  background-color: #219ebc;
+  background-image: linear-gradient(to top, aqua, #219ebc, #219ebc, #219ebc);
   background-position: bottom;
   height: 360px;
   text-align: center;
@@ -32,11 +42,11 @@ body {
 .h1 {
   border-radius: 10px;
   background-color: orange;
-  color: #f5f5f5;
 }
 
 #falling-dice {
-  max-width: 100%;
+  max-height: 100%;
+  background-position: bottom;
 }
 
 /*=========================================
@@ -49,20 +59,27 @@ body {
   display: flex;
   border: 0px;
   background-color: #8ecae6;
+  background-image: linear-gradient(
+    to bottom,
+    aqua,
+    #8ecae6,
+    #8ecae6,
+    #8ecae6,
+    aqua
+  );
   background-position: bottom;
   min-height: 360px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  border-top: 10px solid #023e8a;
-  border-bottom: 10px solid #023e8a;
 }
 .dices {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   min-width: 500px;
+  margin-bottom: 30px;
 }
 #d10 {
   display: flex;
@@ -113,6 +130,29 @@ body {
   padding: 15px 15px;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
+
+/*=========================================
+===========================================
+           !!!!! Button !!!!                      
+===========================================
+===========================================*/
+
+#home-btn {
+  background-color: #fb8500;
+  border-radius: 30px;
+  padding: 5px 10px;
+  border: none;
+  margin-left: 30px;
+}
+
+#News-btn {
+  background-color: #fb8500;
+  border-radius: 30px;
+  padding: 5px 10px;
+  border: none;
+  margin-left: 30px;
+}
+
 .btn {
   display: flex;
   background-position: bottom;
@@ -121,15 +161,104 @@ body {
   text-align: center;
   margin-bottom: 60px;
   min-width: 500px;
+  margin-bottom: 90px;
+}
+
+#D10-btn {
+  background-color: #fb8500;
   border-radius: 30px;
+  padding: 5px 10px;
+  border: none;
+}
+
+#D12-btn {
+  background-color: #fb8500;
+  border-radius: 30px;
+  padding: 5px 10px;
+  border: none;
+}
+
+#D20-btn {
+  background-color: #fb8500;
+  border-radius: 30px;
+  padding: 5px 10px;
+  border: none;
+}
+
+#D100-btn {
+  background-color: #fb8500;
+  border-radius: 30px;
+  padding: 5px 10px;
+  border: none;
+}
+
+#sum {
+  margin-top: 100px;
+  background-color: #fb8500;
+  border-radius: 30px;
+  padding: 10px 30px;
+  border: none;
+  font-size: 30px;
+}
+
+/*=========================================
+===========================================
+            !!!!! Hover !!!!                      
+===========================================
+===========================================*/
+
+#Home-btn:hover {
+  background-color: #c96d04;
+  color: white;
+}
+
+#News-btn:hover {
+  background-color: #c96d04;
+  color: white;
+}
+
+#D10-btn:hover {
+  background-color: #c96d04;
+  color: white;
+}
+
+#D12-btn:hover {
+  background-color: #c96d04;
+  color: white;
+}
+
+#D20-btn:hover {
+  background-color: #c96d04;
+  color: white;
+}
+
+#D100-btn:hover {
+  background-color: #c96d04;
+  color: white;
+}
+
+#sum:hover {
+  background-color: #c96d04;
+  color: white;
 }
 /*=========================================
 ===========================================
-                Fotter                      
+         !!!!!!  Fotter   !!!!!!!                   
 ===========================================
 ===========================================*/
 
 .fotter {
   min-height: 360px;
-  background-color: aqua;
+  background-image: linear-gradient(to bottom, aqua, #219ebc, #219ebc, #219ebc);
+
+  text-align: center;
+}
+
+#resolte {
+  margin-top: 80px;
+  margin-inline: auto;
+  font-size: xx-large;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 300;
 }

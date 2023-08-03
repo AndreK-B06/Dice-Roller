@@ -5,6 +5,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     />
     <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" href="images/GrenDice.png" />
     <title>Dice Roller</title>
   </head>
   <body>
@@ -14,8 +15,8 @@
 ===========================================
 ===========================================-->
     <main class="Headder">
-      <button>Home</button>
-      <button></button>
+      <button id="Home-btn">Home</button>
+      <button id="News-btn">News</button>
       <button></button>
     </main>
 
@@ -59,11 +60,26 @@
           <h3>D100</h3>
         </div>
       </div>
+
+      <!----=========================================
+===========================================
+         !!!!!!!   Button  !!!!!!!
+===========================================
+===========================================-->
+
       <div class="btn">
-        <button>Rolle Dice</button>
-        <button>Rolle Dice</button>
-        <button>Rolle Dice</button>
-        <button>Rolle Dice</button>
+        <div>
+          <button id="D10-btn">Add Dice</button>
+        </div>
+        <div>
+          <button id="D12-btn">Add Dice</button>
+        </div>
+        <div>
+          <button id="D20-btn">Add Dice</button>
+        </div>
+        <div>
+          <button id="D100-btn">Add Dice</button>
+        </div>
       </div>
     </section>
 
@@ -73,6 +89,9 @@
 ===========================================
 ===========================================-->
 
-    <footer class="fotter"></footer>
+    <footer class="fotter">
+      <button id="sum">Roll Dices</button>
+      <h2 id="Resolte">Resolte:</h2>
+    </footer>
   </body>
 </html>
