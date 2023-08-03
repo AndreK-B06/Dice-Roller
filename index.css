@@ -37,7 +37,7 @@ body {
   border: 0px;
   background-image: linear-gradient(to top, aqua, #219ebc, #219ebc, #219ebc);
   background-position: bottom;
-  height: 360px;
+  height: 400px;
   text-align: center;
 }
 
@@ -47,13 +47,13 @@ body {
 }
 
 #falling-dice {
-  max-height: 100%;
+  max-width: 50%;
   background-position: bottom;
 }
 
 /*=========================================
 ===========================================
-               Funntion
+   !!!!!!!!!    Dices  !!!!!!!!!!!
 ===========================================
 ===========================================*/
 
@@ -70,7 +70,7 @@ body {
     aqua
   );
   background-position: bottom;
-  min-height: 360px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -269,22 +269,28 @@ body {
   text-align: center;
 }
 
-#resolte {
-  margin-top: 80px;
-  margin-inline: auto;
-  font-size: xx-large;
-  text-align: start;
-  padding-left: 10px;
-  background-color: white;
-  border-radius: 10px;
-  max-width: 200;
-}
-#history {
+/*=========================================
+===========================================
+         !!!!!!  Text   !!!!!!!                   
+===========================================
+===========================================*/
+#dic-add {
   margin-inline: auto;
   font-size: x-large;
   text-align: start;
   padding-left: 10px;
-  background-color: white;
   border-radius: 10px;
-  max-width: 200;
+}
+
+#resolte {
+  margin-top: 80px;
+  margin-inline: auto;
+  font-size: xx-large;
+  padding-left: 10px;
+}
+#history {
+  margin-inline: auto;
+  font-size: x-large;
+  padding-left: 10px;
+  border-radius: 10px;
 }
