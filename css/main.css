@@ -25,9 +25,12 @@ main {
 }
 body {
   flex-direction: column;
+  align-items: start;
+  justify-content: start;
   margin: auto;
   background-color: var(--Blue);
   width: 425px;
+  height: 790px;
   border: solid;
 }
 header,
