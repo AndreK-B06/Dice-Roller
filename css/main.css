@@ -72,7 +72,7 @@ main {
 .nav-btn,
 .dropbtn {
   padding: 10px 20px;
-  margin-inline: 10px;
+  margin-inline: 5px;
   font-size: 25px;
 }
 .dropdown-content,
