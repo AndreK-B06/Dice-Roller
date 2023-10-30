@@ -1,3 +1,3 @@
 const pages = {
-  wfrpPageBtn: document.querySelector(),
+  wfrpPageBtn: document.querySelector("#wfrp"),
 };
