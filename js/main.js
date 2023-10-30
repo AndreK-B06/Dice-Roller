@@ -1,6 +1,7 @@
 const pages = {
-  wfrpPageBtn: document.querySelector("#wfrp"),
+  wfrp: document.querySelector("#wfrp"),
 };
-pages.wfrpPageBtn.addEventListener("click", function () {
+pages.wfrp.addEventListener("click", function () {
   location.href = "/wfrp.html";
+  console.log("Yes");
 });
