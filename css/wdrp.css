@@ -36,7 +36,7 @@ body {
   border: solid;
 }
 header,
-.nav-btn {
+.nav-li {
   margin-top: 10px;
 }
 /* --------------
@@ -45,32 +45,26 @@ header,
 h1 {
   font-size: 90px;
 }
-.dice-text {
+.dice-li {
   font-size: 30px;
-  padding: 10px;
 }
-/* --------------
-!!!!! Start Hedder !!!!!
--------------- */
 
-/* --------------
-!!!!! End Hedder !!!!!
--------------- */
-
-/* --------------
-!!!!! Main !!!!!
--------------- */
+/* -----------------------------------
+!!!!! Alinment and margin/pading !!!!!
+------------------------------------ */
 main {
   border: solid;
   margin-top: 10px;
 }
+/* Aside Section start */
 aside {
   border: solid;
   padding: 50px 20px;
 }
-/* --------------
-!!!!! Fotter !!!!!
--------------- */
+.dice-li {
+  padding: 10px;
+}
+/* Aside Section End */
 footer {
   margin: auto;
 }
@@ -78,6 +72,10 @@ footer {
 /* --------------
 !!!!! Button !!!!!
 -------------- */
+.dice-li {
+  border-radius: 10px;
+}
+
 /* -----------------------
 !!!! Non hoover Function !!!!
 ---------------------------- */
