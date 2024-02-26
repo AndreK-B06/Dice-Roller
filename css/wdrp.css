@@ -3,19 +3,19 @@
   padding: 0px;
   box-sizing: border-box;
 }
-/* --------------
-!!!!! Root !!!!!
--------------- */
+/* ----
+* Root *
+------ */
 :root {
-  --Blue: #b2dafa;
+  --Background: #b2dafa;
   --Purple: #270722;
   --Platinum: #d7dedc;
   --Orange: #ff8552;
   --orange-dark: #5b2f1c;
 }
-/* -------------------------
-!!!!! Body and general !!!!!
-------------------------- */
+/* ---------------
+* Body and general *
+------------------ */
 body,
 header,
 main,
@@ -30,7 +30,7 @@ body {
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  background-color: var(--Blue);
+  background-color: var(--Background);
   width: 425px;
   height: 790px;
   border: solid;
@@ -39,9 +39,9 @@ header,
 .nav-li {
   margin-top: 10px;
 }
-/* --------------
-!!!!! Text !!!!!
--------------- */
+/* ----
+* Text *
+------ */
 h1 {
   font-size: 90px;
 }
@@ -49,36 +49,42 @@ h1 {
   font-size: 30px;
 }
 
-/* -----------------------------------
-!!!!! Alinment and margin/pading !!!!!
------------------------------------- */
+/* --------------------------
+* Alinment and margin/pading *
+---------------------------- */
 main {
   border: solid;
   margin-top: 10px;
 }
-/* Aside Section start */
+/*  Aside Section start */
 aside {
   border: solid;
   padding: 50px 20px;
 }
-.dice-li {
+.dice {
+  display: flex;
+  justify-content: space-evenly;
   padding: 10px;
+}
+.dice-input {
+  margin-inline: 0px;
 }
 /* Aside Section End */
 footer {
   margin: auto;
 }
 
-/* --------------
-!!!!! Button !!!!!
--------------- */
+/* -------
+* Button *
+-------- */
 .dice-li {
   border-radius: 10px;
 }
 
-/* -----------------------
-!!!! Non hoover Function !!!!
----------------------------- */
+/* -------------------
+* Non hoover Function *
+--------------------- */
+
 .nav-btn,
 .dropbtn {
   padding: 10px 20px;
@@ -94,9 +100,9 @@ footer {
   font-weight: bold;
   border: none;
 }
-/* -----------------------
-!!!! hoover Function !!!!
----------------------------- */
+/* ---------------
+* hoover Function *
+----------------- */
 .nav-btn:hover,
 .dropdown:hover .dropbtn,
 .dropdown-content a:hover {
