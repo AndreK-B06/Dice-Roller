@@ -8,10 +8,39 @@
 ------ */
 :root {
   --Background: #b2dafa;
-  --Purple: #270722;
-  --Platinum: #d7dedc;
-  --Orange: #ff8552;
-  --orange-dark: #5b2f1c;
+  --Background-dice: rgba(246, 237, 208, 0.75);
+  --Text: #270722;
+  --Text-hover: #d7dedc;
+  --Btn-Background: #ff8552;
+  --Btn-Hover: #5b2f1c;
+}
+/* -------
+* Colors *
+-------- */
+body {
+  background-color: var(--Background);
+  color: var(--Text);
+}
+/* Dropdown and buttons colors */
+.nav-btn,
+.dropdown-content,
+.drop-btn {
+  background-color: var(--Btn-Background);
+  color: var(--Text);
+}
+/* Dropdown and buttons hover colers */
+.nav-btn:hover,
+.dropdown-content a:hover {
+  background-color: var(--Btn-Hover);
+  color: var(--Text-hover);
+}
+main {
+  color: var(--Text);
+  background-color: var(--Background-dice);
+  box-shadow: var(--Purple) -5px 5px 10px;
+}
+body {
+  box-shadow: var(--Purple) -10px 10px 10px;
 }
 /* ---------------
 * Body and general *
@@ -19,55 +48,73 @@
 body,
 header,
 main,
+#dices, /* skill-comtainer */
 aside,
 footer {
   display: flex;
-  color: var(--Purple);
   justify-content: center;
+  align-items: center;
   margin: 10px auto;
 }
 body {
   flex-direction: column;
-  align-items: start;
   justify-content: start;
-  background-color: var(--Background);
   width: 425px;
-  height: 790px;
+  padding: 10px;
   border: solid;
+  border-radius: 20px;
 }
 header,
-.nav-li {
+.nav.btn {
   margin-top: 10px;
 }
 /* ----
 * Text *
 ------ */
-h1 {
-  font-size: 90px;
-}
-.dice-li {
+.dice-lable {
   font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-/* --------------------------
-* Alinment and margin/pading *
----------------------------- */
+/* ------------------
+* Flex and Alinment *
+------------------- */
+.nav-btn {
+  margin-inline: 5px;
+}
+.nav-btn,
+.drop-btn {
+  padding: 10px 20px;
+  border: none;
+}
+.dropdown-content,
+.drop-btn {
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+}
+/*  Main Section start */
 main {
-  border: solid;
-  margin-top: 10px;
-}
-/*  Aside Section start */
-aside {
-  border: solid;
-  padding: 50px 20px;
-}
-.dice {
   display: flex;
-  justify-content: space-evenly;
-  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 50px 20px;
+  width: 100%;
 }
-.dice-input {
-  margin-inline: 0px;
+#dices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0px 20px;
+}
+aside {
+  flex-direction: column;
 }
 /* Aside Section End */
 footer {
@@ -77,28 +124,8 @@ footer {
 /* -------
 * Button *
 -------- */
-.dice-li {
+.nav-btn {
   border-radius: 10px;
-}
-
-/* -------------------
-* Non hoover Function *
---------------------- */
-
-.nav-btn,
-.dropbtn {
-  padding: 10px 20px;
-  margin-inline: 5px;
-  font-size: 25px;
-}
-.dropdown-content,
-.nav-btn,
-.dropbtn {
-  background-color: var(--Orange);
-  color: var(--Purple);
-  border-radius: 10px;
-  font-weight: bold;
-  border: none;
 }
 /* ---------------
 * hoover Function *
@@ -106,8 +133,6 @@ footer {
 .nav-btn:hover,
 .dropdown:hover .dropbtn,
 .dropdown-content a:hover {
-  background-color: var(--orange-dark);
-  color: var(--Platinum);
   border-radius: 5px;
 }
 
@@ -124,7 +149,6 @@ footer {
 .dropdown-content a {
   padding: 12px 16px;
   text-decoration: none;
-  color: var(--Purple);
 }
 
 .dropdown:hover .dropdown-content,
