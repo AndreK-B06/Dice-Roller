@@ -71,9 +71,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
       currresult = rolledDiceHundred;
       sumOfAttack();
     }
-    console.log(`this is ${inputAttck.value}`);
+    console.log(`Your Skill is ${inputAttck.value}`);
     function sumOfAttack() {
+      //
+      // * if you fail the checked *//
+      //
       if (currresult > inputAttck.value) {
+        result.innerHTML = "";
         let failed = currresult - inputAttck.value;
         for (let i = 0; i < 50; i++) {
           if (failed > 10) {
@@ -81,10 +85,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
             console.log(`calc curr value ${failed}`);
             succ++;
           } else {
-            console.log(`u lost ${succ} times`);
+            newParagraph.textContent = `Dice: ${rolledDiceHundred}`;
+            result.appendChild(newParagraph);
+            newParagraph.textContent = `Result: - ${failed} SL`;
+            result.appendChild(newParagraph);
+            console.log(`- ${succ} SL`);
           }
         }
+        //
+        // * if you succeede the checked *//
+        //
       } else if (currresult < inputAttck.value) {
+        result.innerHTML = "";
         let win = inputAttck.value - currresult;
         for (let i = 0; i < 50; i++) {
           if (win > 10) {
@@ -92,10 +104,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
             console.log(`calc curr value ${win}`);
             succ++;
           } else {
-            console.log(`u won ${succ} times`);
+            newParagraph.textContent = `Dice: ${rolledDiceHundred}`;
+            result.appendChild(newParagraph);
+            newParagraph.textContent = `Result: ${win} SL`;
+            result.appendChild(newParagraph);
+            console.log(`${succ} SL`);
           }
         }
       } else if (currresult === inputAttck.value) {
+        result.innerHTML = "";
         let win = currresult - inputAttck.value;
         console.log("0 sucsess");
       } else {
