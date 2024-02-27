@@ -33,29 +33,39 @@
         * Dices *
         ----- -->
       <section class="flex" id="dices">
-        <!-- D10 Dice -->
+        <!--
+          * D10 Dice *
+        -->
         <input type="checkbox" id="dice10" class="dice-input" name="dice10" value="D10" />
         <label class="dice-lable" for="dice10">D10</label></br>
-        <!-- D100 Dice -->
+        <!--
+          * D100 Dice *
+        -->
         <input type="checkbox" id="dice100" class="dice-input" name="dice100" value="D100" />
         <label class="dice-lable" for="dice100">D100</label></br>
       </section>
-      <!-- Result for rolling dice -->
+      <!--
+        * Result for rolling dice *
+      -->
       <section id="dice-result"></section>
       <!-- -----------------
         * Your roll choice *
         ---------------- -->
       <section class="flex" id="skill-comtainer">
-        <!-- Your Attack -->
+        <!--
+          * Your Attack *
+        -->
         <aside class="flex">
         <h2>Roll your attack skill</h2>
         <label for="attack-skill">Your Skill</label>
         <input type="number" id="attack-skill" name="attack-skill" min="1" max="200">
         <div id="result-attack">
         </div>
-        <button class="nav-btn" id="attack-btn">Roll Attack</button>
+        <button class="roll-btn" id="attack-btn">Roll Attack</button>
         </aside>
-        <!-- Your Defence -->
+        <!--
+          * Your Defence *
+        -->
         <aside>
           <h2>Roll your defence skill</h2>
 
@@ -65,7 +75,7 @@
           <input type="number" id="toughness-skill" name="toughness-skill" min="1" max="200">
           <div id="result-defence">
         </div>
-          <button class="nav-btn" id="defence-btn">Roll Defence</button>
+          <button class="roll-btn" id="defence-btn">Roll Defence</button>
         </aside>
       </section>
       

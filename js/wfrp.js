@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const homePage = document.querySelector("#home-btn");
   const warhammerFantasy = document.querySelector("#wfrp");
   //
-  // ? Dices function *//
+  // * Dices function *//
   //
   attack.addEventListener("click", function () {
     let rolledDiceHundred = 0;

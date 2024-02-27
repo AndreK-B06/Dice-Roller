@@ -23,13 +23,15 @@ body {
 }
 /* Dropdown and buttons colors */
 .nav-btn,
-.dropdown-content,
+.roll-btn,
+.drop-down-content,
 .drop-btn {
   background-color: var(--Btn-Background);
   color: var(--Text);
 }
 /* Dropdown and buttons hover colers */
 .nav-btn:hover,
+.roll-btn:hover,
 .dropdown-content a:hover {
   background-color: var(--Btn-Hover);
   color: var(--Text-hover);
@@ -65,7 +67,8 @@ body {
   border-radius: 20px;
 }
 header,
-.nav.btn {
+.nav.btn,
+roll-btn {
   margin-top: 10px;
 }
 /* ----
@@ -87,6 +90,7 @@ header,
 .drop-btn {
   padding: 10px 20px;
   border: none;
+  border-radius: 5px;
 }
 .dropdown-content,
 .drop-btn {
@@ -124,18 +128,9 @@ footer {
 /* -------
 * Button *
 -------- */
-.nav-btn {
-  border-radius: 10px;
-}
 /* ---------------
 * hoover Function *
 ----------------- */
-.nav-btn:hover,
-.dropdown:hover .dropbtn,
-.dropdown-content a:hover {
-  border-radius: 5px;
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
