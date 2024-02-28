@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
   let sidesOnDiceHundred = 100;
   let currresult = 0;
   let succ = 0;
+  let numberWin = 0;
+  let numberLoss = 0;
   //
   // * Create Element *//
   //
@@ -81,15 +83,16 @@ document.addEventListener("DOMContentLoaded", (e) => {
         let failed = currresult - inputAttck.value;
         for (let i = 0; i < 50; i++) {
           if (failed > 10) {
-            failed -= 10;
+            numberLoss += failed -= 10;
             console.log(`calc curr value ${failed}`);
             succ++;
           } else {
             newParagraph.textContent = `Dice: ${rolledDiceHundred}`;
             result.appendChild(newParagraph);
-            newParagraph.textContent = `Result: - ${failed} SL`;
+            newParagraph.textContent = `Result: - ${numberLoss} SL`;
             result.appendChild(newParagraph);
             console.log(`- ${succ} SL`);
+            numberLoss = 0;
           }
         }
         //
@@ -100,15 +103,16 @@ document.addEventListener("DOMContentLoaded", (e) => {
         let win = inputAttck.value - currresult;
         for (let i = 0; i < 50; i++) {
           if (win > 10) {
-            win -= 10;
+            numberWin += win -= 10;
             console.log(`calc curr value ${win}`);
             succ++;
           } else {
             newParagraph.textContent = `Dice: ${rolledDiceHundred}`;
             result.appendChild(newParagraph);
-            newParagraph.textContent = `Result: ${win} SL`;
+            newParagraph.textContent = `Result: ${numberWin} SL`;
             result.appendChild(newParagraph);
             console.log(`${succ} SL`);
+            numberWin += 0;
           }
         }
       } else if (currresult === inputAttck.value) {

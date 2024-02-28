@@ -87,7 +87,7 @@ roll-btn {
   margin-inline: 5px;
 }
 .nav-btn,
-.drop-btn {
+.roll-btn {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -97,6 +97,10 @@ roll-btn {
   font-weight: bold;
   border-radius: 5px;
   border: none;
+}
+.roll-btn {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 /*  Main Section start */
 main {
