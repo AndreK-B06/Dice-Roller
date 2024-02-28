@@ -81,18 +81,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
       if (currresult > inputAttck.value) {
         result.innerHTML = "";
         let failed = currresult - inputAttck.value;
-        for (let i = 0; i < 50; i++) {
-          if (failed > 10) {
-            numberLoss += failed -= 10;
-            console.log(`calc curr value ${failed}`);
+        numberLoss += failed;
+        for (let i = 0; i < inputAttck.value; i++) {
+          if (numberLoss > 0) {
+            numberLoss -= 10;
+            console.log(`calc curr value ${numberLoss}`);
             succ++;
           } else {
-            newParagraph.textContent = `Dice: ${rolledDiceHundred}`;
-            result.appendChild(newParagraph);
-            newParagraph.textContent = `Result: - ${numberLoss} SL`;
-            result.appendChild(newParagraph);
+            makeP(succ, rolledDiceHundred);
             console.log(`- ${succ} SL`);
+            succ = 0;
             numberLoss = 0;
+            break;
           }
         }
         //
@@ -100,19 +100,20 @@ document.addEventListener("DOMContentLoaded", (e) => {
         //
       } else if (currresult < inputAttck.value) {
         result.innerHTML = "";
-        let win = inputAttck.value - currresult;
-        for (let i = 0; i < 50; i++) {
-          if (win > 10) {
-            numberWin += win -= 10;
-            console.log(`calc curr value ${win}`);
+        let win = currresult - inputAttck.value;
+        console.log(win);
+        numberWin += win;
+        for (let i = 0; i < inputAttck.value; i++) {
+          if (numberWin < 0) {
+            numberWin += 10;
+            console.log(`calc curr value ${numberWin}`);
             succ++;
           } else {
-            newParagraph.textContent = `Dice: ${rolledDiceHundred}`;
-            result.appendChild(newParagraph);
-            newParagraph.textContent = `Result: ${numberWin} SL`;
-            result.appendChild(newParagraph);
+            makeP(succ, rolledDiceHundred);
             console.log(`${succ} SL`);
-            numberWin += 0;
+            succ = 0;
+            numberWin = 0;
+            break;
           }
         }
       } else if (currresult === inputAttck.value) {
@@ -124,6 +125,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
       }
     }
   });
+  function makeP(succ, diceVal) {
+    newParagraph.textContent = `Dice: ${diceVal}`;
+    result.appendChild(newParagraph);
+    newParagraph.textContent = `Result: ${succ} SL`;
+    result.appendChild(newParagraph);
+  }
   //
   // * Page switchers *//
   //

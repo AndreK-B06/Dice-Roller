@@ -53,7 +53,6 @@ main,
 #dices, /* skill-comtainer */
 aside,
 footer {
-  display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px auto;
@@ -79,10 +78,28 @@ roll-btn {
   font-weight: bold;
   letter-spacing: 1px;
 }
+.dropdown-content,
+.drop-btn {
+  font-weight: bold;
+}
 
 /* ------------------
 * Flex and Alinment *
 ------------------- */
+/* Flex */
+body,
+header,
+main,
+#dices, /* skill-comtainer */
+aside,
+footer {
+  display: flex;
+}
+/* *Alinment* */
+main {
+  flex-direction: column;
+}
+/* *Margin and padding* */
 .nav-btn {
   margin-inline: 5px;
 }
@@ -94,7 +111,6 @@ roll-btn {
 }
 .dropdown-content,
 .drop-btn {
-  font-weight: bold;
   border-radius: 5px;
   border: none;
 }
@@ -104,8 +120,6 @@ roll-btn {
 }
 /*  Main Section start */
 main {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: none;
@@ -115,7 +129,6 @@ main {
   width: 100%;
 }
 #dices {
-  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
