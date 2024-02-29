@@ -13,17 +13,15 @@
     * Hedder *
     ------ -->
     <header>
-      <nav>
         <button class="nav-btn" id="home-btn">Home</button>
-        <section class="dropdown">
-          <button class="nav-btn" class="drop-btn">Roleplays</button>
-          <div class="dropdown-content">
-            <a class="nav-btn" id="wfrp" href="#">Warhammer fantasy</a>
-            <a class="nav-btn" href="#">Star Wars Coming</a>
-          </div>
-        </section>
+        <nav class="dropdown">
+          <button class="drop-btn" id="roleplays-btn">Roleplays</button>
+          <section class="dropdown-content">
+            <a class="drop-btn" id="wfrp-btn" href="#">Warhammer fantasy</a>
+            <a class="drop-btn" id="star-wars-btn" href="#">Star Wars Coming</a>
+          </section>
+        </nav>
         <button class="nav-btn">Credit</button>
-      </nav>
     </header>
     <!-- ---
     * Main *
@@ -68,7 +66,6 @@
         -->
         <aside>
           <h2>Roll your defence skill</h2>
-
           <label for="defence-skill">Defence skill</label>
           <input type="number" id="defence-skill" name="defence-skill" min="1" max="200">
           <label for="toughness-skill">Toughness skill</label>
@@ -78,11 +75,8 @@
           <button class="roll-btn" id="defence-btn">Roll Defence</button>
         </aside>
       </section>
-      
       </main>
-    <!-- -----
-    * Fotter *
-    ------ -->
+    <!-- * Fotter * -->
     <footer>
       <p>Footer</p>
     </footer>

@@ -74,6 +74,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
       sumOfAttack();
     }
     console.log(`Your Skill is ${inputAttck.value}`);
+    //
+    //* Attack Roll *//
+    //
     function sumOfAttack() {
       //
       // * if you fail the checked *//

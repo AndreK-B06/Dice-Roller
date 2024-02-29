@@ -7,9 +7,10 @@
 * Root *
 ------ */
 :root {
-  --Background: #b2dafa;
-  --Background-dice: rgba(246, 237, 208, 0.75);
+  /* --text: #b2dafa; */
   --Text: #270722;
+  --Background-dice: rgba(246, 237, 208, 0.75);
+  --Background: #270722;
   --Text-hover: #d7dedc;
   --Btn-Background: #ff8552;
   --Btn-Hover: #5b2f1c;
@@ -31,6 +32,7 @@ body {
 }
 /* Dropdown and buttons hover colers */
 .nav-btn:hover,
+#roleplays-btn:hover,
 .roll-btn:hover,
 .dropdown-content a:hover {
   background-color: var(--Btn-Hover);
@@ -39,10 +41,10 @@ body {
 main {
   color: var(--Text);
   background-color: var(--Background-dice);
-  box-shadow: var(--Purple) -5px 5px 10px;
+  box-shadow: var(--Text) -1px 1px 5px;
 }
 body {
-  box-shadow: var(--Purple) -10px 10px 10px;
+  box-shadow: var(--Text) -10px 10px 10px;
 }
 /* ---------------
 * Body and general *
@@ -58,21 +60,59 @@ footer {
   margin: 10px auto;
 }
 body {
-  flex-direction: column;
   justify-content: start;
   width: 425px;
-  padding: 10px;
+  padding: 10px 50px;
   border: solid;
   border-radius: 20px;
 }
+header {
+  max-width: 100%;
+}
 header,
 .nav.btn,
-roll-btn {
+.roll-btn {
   margin-top: 10px;
+}
+.dice-input {
+  width: 30px;
+  height: 30px;
+  border-radius: 40px;
+}
+.nav-btn,
+.drop-btn {
+  padding: 5px 10px;
+  margin-inline: 5px;
+}
+#star-wars-btn {
+  border-radius: 0px 0px 5px 5px;
+}
+.nav-btn,
+.roll-btn,
+#roleplays-btn {
+  padding: 10px 20px;
+}
+.nav-btn,
+.roll-btn,
+#roleplays-btn {
+  border: none;
+}
+.nav-btn,
+.roll-btn,
+#roleplays-btn {
+  border-radius: 5px;
+}
+main {
+  max-width: 100%;
 }
 /* ----
 * Text *
 ------ */
+.nav-btn,
+.drop-btn {
+  font-size: 20px;
+  font-weight: bold;
+}
 .dice-lable {
   font-size: 30px;
   font-weight: bold;
@@ -80,8 +120,9 @@ roll-btn {
 }
 .dropdown-content,
 .drop-btn {
-  font-weight: bold;
+  max-width: 100%;
 }
+/* Roleplays-btn */
 
 /* ------------------
 * Flex and Alinment *
@@ -96,29 +137,24 @@ footer {
   display: flex;
 }
 /* *Alinment* */
-main {
+body,
+main,
+aside {
   flex-direction: column;
 }
-/* *Margin and padding* */
+/* skill-comtainer */
+#dices {
+  flex-direction: row;
+}
+/* * Margin and padding * */
 .nav-btn {
   margin-inline: 5px;
 }
-.nav-btn,
-.roll-btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-}
-.dropdown-content,
-.drop-btn {
-  border-radius: 5px;
-  border: none;
-}
+
 .roll-btn {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-/*  Main Section start */
 main {
   justify-content: center;
   align-items: center;
@@ -129,33 +165,28 @@ main {
   width: 100%;
 }
 #dices {
-  flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
   padding: 0px 20px;
 }
-aside {
-  flex-direction: column;
-}
-/* Aside Section End */
 footer {
   margin: auto;
 }
-
-/* -------
-* Button *
--------- */
 /* ---------------
 * hoover Function *
 ----------------- */
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
+#roleplays-btn:hover {
+  border-radius: 5px 5px 0px 0px;
+}
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 39px;
 }
 
 .dropdown-content a {
