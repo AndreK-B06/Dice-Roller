@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   let diceHundred = document.querySelector("#dice100");
   let result = document.querySelector("#dice-result");
   const attack = document.querySelector("#attack-btn");
-  const defence = document.querySelector("#defence-btn");
+  //   const defence = document.querySelector("#defence-btn");
   const inputAttck = document.querySelector("#attack-skill");
   //
   // * Define dices *//
@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
   //
   // * Create Element *//
   //
-  let newParagraph = document.createElement("p");
+  let successLevels = document.createElement("p");
+  let showRoll = document.createElement("p");
 
   //
   // * Define pages *//
@@ -39,8 +40,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
     if (!diceTen.checked && diceHundred.checked) {
       result.innerHTML = "";
       rolledDiceHundred = Math.floor(Math.random() * sidesOnDiceHundred) + 1;
-      newParagraph.textContent = `Result: ${rolledDiceHundred}`;
-      result.appendChild(newParagraph);
+      showRoll.textContent = `Dice roll: ${sidesOnDiceHundred}`;
+      successLevels.textContent = `Result: ${rolledDiceHundred}`;
+      result.appendChild(showRoll);
+      result.appendChild(successLevels);
       console.log(rolledDiceHundred);
       currresult = rolledDiceHundred;
       sumOfAttack();
@@ -50,8 +53,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
     } else if (diceTen.checked && !diceHundred.checked) {
       result.innerHTML = "";
       rolledTen = Math.floor(Math.random() * sidesOnTen) + 1;
-      newParagraph.textContent = `Result: ${rolledTen}`;
-      result.appendChild(newParagraph);
+      showRoll.textContent = `Dice roll: ${sidesOnTen}`;
+      successLevels.textContent = `Result: ${rolledTen}`;
+      result.appendChild(showRoll);
+      result.appendChild(successLevels);
       console.log(rolledTen);
       currresult = rolledTen;
       sumOfAttack();
@@ -61,15 +66,17 @@ document.addEventListener("DOMContentLoaded", (e) => {
     } else if (diceHundred.checked && diceTen.checked) {
       result.innerHTML = "";
       rolledDiceHundred = Math.floor(Math.random() * sidesOnDiceHundred) + 1;
-      newParagraph.textContent = `Result: ${rolledDiceHundred}. showing d100`;
-      result.appendChild(newParagraph);
+      successLevels.textContent = `Result: ${rolledDiceHundred}. showing d100`;
+      result.appendChild(successLevels);
       console.log(rolledDiceHundred);
 
       sumOfAttack();
     } else {
       result.innerHTML = "";
-      newParagraph.textContent = `Result: 0`;
-      result.appendChild(newParagraph);
+      showRoll.textContent = `Dice roll: ${sidesOnDiceHundred}`;
+      successLevels.textContent = `Result: 0`;
+      result.appendChild(showRoll);
+      result.appendChild(successLevels);
       currresult = rolledDiceHundred;
       sumOfAttack();
     }
@@ -93,6 +100,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
           } else {
             makeP(succ, rolledDiceHundred);
             console.log(`- ${succ} SL`);
+            showRoll.textContent = `Dice roll: ${sidesOnDiceHundred}`;
+            result.appendChild(showRoll);
             succ = 0;
             numberLoss = 0;
             break;
@@ -114,6 +123,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
           } else {
             makeP(succ, rolledDiceHundred);
             console.log(`${succ} SL`);
+            showRoll.textContent = `Dice roll: ${sidesOnDiceHundred}`;
+            result.appendChild(showRoll);
             succ = 0;
             numberWin = 0;
             break;
@@ -129,10 +140,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
     }
   });
   function makeP(succ, diceVal) {
-    newParagraph.textContent = `Dice: ${diceVal}`;
-    result.appendChild(newParagraph);
-    newParagraph.textContent = `Result: ${succ} SL`;
-    result.appendChild(newParagraph);
+    successLevels.textContent = `Dice: ${diceVal}`;
+    result.appendChild(successLevels);
+    successLevels.textContent = `Result: ${succ} SL`;
+    result.appendChild(successLevels);
   }
   //
   // * Page switchers *//

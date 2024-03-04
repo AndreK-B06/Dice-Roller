@@ -9,7 +9,7 @@
 :root {
   /* --text: #b2dafa; */
   --Text: #270722;
-  --Background-dice: rgba(246, 237, 208, 0.75);
+  --Background-dice: #f6edd087;
   --Background: #270722;
   --Text-hover: #d7dedc;
   --Btn-Background: #ff8552;
@@ -29,6 +29,7 @@ body {
 .drop-btn {
   background-color: var(--Btn-Background);
   color: var(--Text);
+  transition: 0.5s;
 }
 /* Dropdown and buttons hover colers */
 .nav-btn:hover,
@@ -37,14 +38,17 @@ body {
 .dropdown-content a:hover {
   background-color: var(--Btn-Hover);
   color: var(--Text-hover);
+  transition: 0.5s;
 }
+
 main {
   color: var(--Text);
   background-color: var(--Background-dice);
-  box-shadow: var(--Text) -1px 1px 5px;
 }
+
 body {
-  box-shadow: var(--Text) -10px 10px 10px;
+  box-shadow: var(--Text-hover) -5px 5px 10px;
+  border: var(--Text-hover) solid;
 }
 /* ---------------
 * Body and general *
@@ -63,9 +67,10 @@ body {
   justify-content: start;
   width: 425px;
   padding: 10px 50px;
-  border: solid;
   border-radius: 20px;
+  border-spacing: 20px;
 }
+
 header {
   max-width: 100%;
 }
@@ -104,6 +109,10 @@ header,
 }
 main {
   max-width: 100%;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 /* ----
 * Text *
@@ -173,13 +182,8 @@ footer {
   margin: auto;
 }
 /* ---------------
-* hoover Function *
+* hover Function *
 ----------------- */
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
 #roleplays-btn:hover {
   border-radius: 5px 5px 0px 0px;
 }
