@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", (e) => {
+document.addEventListener("DOMContentLoaded", function () {
   //
   // * Get Element from Html *//
   //
@@ -7,27 +7,27 @@ document.addEventListener("DOMContentLoaded", (e) => {
   let result = document.querySelector("#dice-result");
   const attack = document.querySelector("#attack-btn");
   //   const defence = document.querySelector("#defence-btn");
-  const inputAttck = document.querySelector("#attack-skill");
+  const inputAttack = document.querySelector("#attack-skill");
   //
   // * Define dices *//
   //
   let sidesOnTen = 10;
   let sidesOnDiceHundred = 100;
-  let currresult = 0;
-  let succ = 0;
+  let currentResult = 0;
+  let success = 0;
   let numberWin = 0;
   let numberLoss = 0;
   //
   // * Create Element *//
   //
-  let successLevels = document.createElement("p");
+  let successesLevels = document.createElement("p");
   let showRoll = document.createElement("p");
 
   //
   // * Define pages *//
   //
   const homePage = document.querySelector("#home-btn");
-  const warhammerFantasy = document.querySelector("#wfrp");
+  const warhammerFantasy = document.querySelector("#wfrp-btn");
   //
   // * Dices function *//
   //
@@ -40,12 +40,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
     if (!diceTen.checked && diceHundred.checked) {
       result.innerHTML = "";
       rolledDiceHundred = Math.floor(Math.random() * sidesOnDiceHundred) + 1;
-      showRoll.textContent = `Dice roll: ${sidesOnDiceHundred}`;
-      successLevels.textContent = `Result: ${rolledDiceHundred}`;
+      showRoll.textContent = `Dice roll: ${currentResult}`;
+      successesLevels.textContent = `Result: ${rolledDiceHundred}`;
       result.appendChild(showRoll);
-      result.appendChild(successLevels);
+      result.appendChild(successesLevels);
       console.log(rolledDiceHundred);
-      currresult = rolledDiceHundred;
+      currentResult = rolledDiceHundred;
       sumOfAttack();
       //
       // * if D10 is checked *//
@@ -53,12 +53,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
     } else if (diceTen.checked && !diceHundred.checked) {
       result.innerHTML = "";
       rolledTen = Math.floor(Math.random() * sidesOnTen) + 1;
-      showRoll.textContent = `Dice roll: ${sidesOnTen}`;
-      successLevels.textContent = `Result: ${rolledTen}`;
+      showRoll.textContent = `Dice roll: ${currentResult}`;
+      successesLevels.textContent = `Result: ${rolledTen}`;
       result.appendChild(showRoll);
-      result.appendChild(successLevels);
+      result.appendChild(successesLevels);
       console.log(rolledTen);
-      currresult = rolledTen;
+      currentResult = rolledTen;
       sumOfAttack();
       //
       // * if non is checked *//
@@ -66,84 +66,114 @@ document.addEventListener("DOMContentLoaded", (e) => {
     } else if (diceHundred.checked && diceTen.checked) {
       result.innerHTML = "";
       rolledDiceHundred = Math.floor(Math.random() * sidesOnDiceHundred) + 1;
-      successLevels.textContent = `Result: ${rolledDiceHundred}. showing d100`;
-      result.appendChild(successLevels);
+      successesLevels.textContent = `Result: ${rolledDiceHundred}. showing d100`;
+      result.appendChild(successesLevels);
       console.log(rolledDiceHundred);
 
       sumOfAttack();
     } else {
       result.innerHTML = "";
-      showRoll.textContent = `Dice roll: ${sidesOnDiceHundred}`;
-      successLevels.textContent = `Result: 0`;
+      showRoll.textContent = `Dice roll: ${currentResult}`;
+      successesLevels.textContent = `Result: 0`;
       result.appendChild(showRoll);
-      result.appendChild(successLevels);
-      currresult = rolledDiceHundred;
+      result.appendChild(successesLevels);
+      currentResult = rolledDiceHundred;
       sumOfAttack();
     }
-    console.log(`Your Skill is ${inputAttck.value}`);
+    console.log(`Your Skill is ${inputAttack.value}`);
     //
     //* Attack Roll *//
     //
+    //
+    // ! Small problem if the second number is 0 !
+    //
     function sumOfAttack() {
+      // ?Starting to peeper if dice first number matches input first number //
+      let inputFirstDigit = parseInt(inputAttack.value.toString()[0]);
+      let currentFirstDigit = parseInt(currentResult.toString()[0]);
+      let lastDigit = currentResult % 10;
       //
-      // * if you fail the checked *//
-      //
-      if (currresult > inputAttck.value) {
-        result.innerHTML = "";
-        let failed = currresult - inputAttck.value;
-        numberLoss += failed;
-        for (let i = 0; i < inputAttck.value; i++) {
-          if (numberLoss > 0) {
-            numberLoss -= 10;
-            console.log(`calc curr value ${numberLoss}`);
-            succ++;
-          } else {
-            makeP(succ, rolledDiceHundred);
-            console.log(`- ${succ} SL`);
-            showRoll.textContent = `Dice roll: ${sidesOnDiceHundred}`;
-            result.appendChild(showRoll);
-            succ = 0;
-            numberLoss = 0;
-            break;
-          }
+      if (inputFirstDigit === currentFirstDigit) {
+        if (lastDigit > inputAttack.value % 10) {
+          console.log("Loss");
+        } else if (lastDigit < inputAttack.value % 10) {
+          console.log("Win");
         }
         //
-        // * if you succeede the checked *//
+        // * if you fail the checked *//
         //
-      } else if (currresult < inputAttck.value) {
+        if (currentResult > inputAttack.value) {
+          result.innerHTML = "";
+          let failed = currentResult - inputAttack.value;
+          numberLoss += failed;
+          for (let i = 0; i < inputAttack.value; i++) {
+            if (numberLoss > 0) {
+              numberLoss -= 10;
+              console.log(`calculate current value Loss ${numberLoss}`);
+              success++;
+            } else {
+              makeP(success, rolledDiceHundred);
+              console.log(`- ${success} Failed Levels`);
+              success = 0;
+              numberLoss = 0;
+              break;
+            }
+          }
+        }
+      }
+      //
+      // * if you succeed the checked *//
+      //
+      if (currentResult < inputAttack.value) {
         result.innerHTML = "";
-        let win = currresult - inputAttck.value;
+        let win = currentResult - inputAttack.value;
         console.log(win);
         numberWin += win;
-        for (let i = 0; i < inputAttck.value; i++) {
+        for (let i = 0; i < inputAttack.value; i++) {
           if (numberWin < 0) {
             numberWin += 10;
-            console.log(`calc curr value ${numberWin}`);
-            succ++;
+            console.log(`calculate current value Win ${numberWin}`);
+            success++;
           } else {
-            makeP(succ, rolledDiceHundred);
-            console.log(`${succ} SL`);
-            showRoll.textContent = `Dice roll: ${sidesOnDiceHundred}`;
-            result.appendChild(showRoll);
-            succ = 0;
+            makeP(success, rolledDiceHundred);
+            console.log(`${success} Successes Levels`);
+            // showRoll.textContent = `Dice roll: ${currentResult}`;
+            // result.appendChild(showRoll);
+            success = 0;
             numberWin = 0;
             break;
           }
         }
-      } else if (currresult === inputAttck.value) {
-        result.innerHTML = "";
-        let win = currresult - inputAttck.value;
-        console.log("0 sucsess");
+        //
+        // * if you 0 Successes Levels *//
+        //
       } else {
-        console.log("i dunno");
+        console.log("0 SL");
+        result.innerHTML = "";
+        makeP(success, rolledDiceHundred);
       }
     }
   });
-  function makeP(succ, diceVal) {
-    successLevels.textContent = `Dice: ${diceVal}`;
-    result.appendChild(successLevels);
-    successLevels.textContent = `Result: ${succ} SL`;
-    result.appendChild(successLevels);
+  //
+  // * Display result *//
+  //
+  function makeP(success, diceVal) {
+    if (diceVal > inputAttack.value) {
+      success = success - 1;
+      successesLevels.textContent = `Dice: - ${success} Failed Levels`;
+      result.appendChild(successesLevels);
+      showRoll.textContent = `Dice roll: ${diceVal}`;
+      result.appendChild(showRoll);
+    } else if (diceVal < inputAttack.value) {
+      successesLevels.textContent = `Dice: ${success} Successes Levels`;
+      result.appendChild(successesLevels);
+      showRoll.textContent = `Dice roll: ${diceVal}`;
+      result.appendChild(showRoll);
+    } else {
+      successesLevels.textContent = `Dice: ${success} Non Levels`;
+      result.appendChild(successesLevels);
+      showRoll.textContent = `Dice roll: ${diceVal}`;
+    }
   }
   //
   // * Page switchers *//
