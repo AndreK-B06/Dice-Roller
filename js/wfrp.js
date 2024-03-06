@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //
   // * Define pages *//
   //
-  const homePage = document.querySelector("#home-btn");
+  const indexPage = document.querySelector("#index-btn");
   const warhammerFantasy = document.querySelector("#wfrp-btn");
   //
   // * Dices function *//
@@ -175,8 +175,8 @@ document.addEventListener("DOMContentLoaded", function () {
   //
   // * Page switchers *//
   //
-  homePage.addEventListener("click", function () {
-    location.href = "./home.html";
+  indexPage.addEventListener("click", function () {
+    location.href = "./index.html";
   });
 
   warhammerFantasy.addEventListener("click", function () {
