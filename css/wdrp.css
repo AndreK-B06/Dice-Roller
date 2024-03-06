@@ -47,8 +47,6 @@ main {
 }
 
 body {
-  box-shadow: var(--Text-hover) -5px 5px 10px;
-  border: var(--Text-hover) solid;
 }
 /* ---------------
 * Body and general *
@@ -64,11 +62,8 @@ footer {
   margin: 10px auto;
 }
 body {
-  justify-content: start;
-  width: 425px;
+  width: 100%;
   padding: 10px 50px;
-  border-radius: 20px;
-  border-spacing: 20px;
 }
 
 header {
@@ -201,4 +196,14 @@ footer {
 .dropdown:hover .dropdown-content,
 .dropdown-content a {
   display: block;
+}
+@media screen and (min-width: 768px) {
+  main {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    width: 70%;
+  }
 }
