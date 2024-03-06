@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //
   const indexPage = document.querySelector("#index-btn");
   const warhammerFantasy = document.querySelector("#wfrp-btn");
+  console.log(warhammerFantasy);
   //
   // * Dices function *//
   //
