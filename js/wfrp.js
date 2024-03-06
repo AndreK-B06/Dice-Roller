@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let diceHundred = document.querySelector("#dice100");
   let result = document.querySelector("#dice-result");
   const attack = document.querySelector("#attack-btn");
-  //   const defence = document.querySelector("#defence-btn");
   const inputAttack = document.querySelector("#attack-skill");
   //
   // * Define dices *//
@@ -137,8 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
           } else {
             makeP(success, rolledDiceHundred);
             console.log(`${success} Successes Levels`);
-            // showRoll.textContent = `Dice roll: ${currentResult}`;
-            // result.appendChild(showRoll);
             success = 0;
             numberWin = 0;
             break;
