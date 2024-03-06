@@ -1,15 +1,13 @@
 // * Define pages *//
-const homePage = document.querySelector("#home-btn");
+const indexPage = document.querySelector("#index-btn");
 const warhammerFantasy = document.querySelector("#wfrp");
 
 // * Page switchers *//
-homePage.addEventListener("click", function () {
-  location.href = "./home.html";
-  console.log("clickt");
+indexPage.addEventListener("click", function () {
+  location.href = "./index.html";
 });
 warhammerFantasy.addEventListener("click", function () {
   location.href = "./wfrp.html";
-  console.log("clickt");
 });
 
 console.log("jsLoaded");
