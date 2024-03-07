@@ -9,7 +9,7 @@
 :root {
   /* --text: #b2dafa; */
   --Text: #270722;
-  --Background-dice: #d0ba72b5;
+  --Background-dice: #8e8e8eb5;
   --Background: #262626;
   --Text-hover: #d7dedc;
   --Btn-Background: #06aea3;
@@ -31,6 +31,10 @@ body {
   color: var(--Text);
   transition: 0.5s;
 }
+.nav-btn,
+#roleplays-btn {
+  box-shadow: -5px 5px 10px var(--Text), -3px 3px 10px var(--Text-hover) inset;
+}
 input[type="checkbox"]:checked {
   accent-color: var(--Btn-Background);
 }
@@ -47,6 +51,7 @@ input[type="checkbox"]:checked {
 main {
   color: var(--Text);
   background-color: var(--Background-dice);
+  box-shadow: -5px 5px 10px var(--Text);
 }
 /* ---------------
 * Body and general *
