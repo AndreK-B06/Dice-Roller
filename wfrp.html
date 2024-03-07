@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/wdrp.css" />
     <link rel="icon" type="image/png" href="images/GrenDice.png" />
         <script type="module" src="./js/wfrp.js"></script>
@@ -10,19 +13,19 @@
   </head>
   <body>
     <!-- -----
-    * Hedder *
+    * nav *
     ------ -->
-    <header>
+    <nav>
         <button class="nav-btn" id="index-btn">Home</button>
-        <nav class="dropdown">
+        <section class="dropdown">
           <button class="drop-btn" id="roleplays-btn">Roleplays</button>
           <section class="dropdown-content">
             <a class="drop-btn" id="wfrp-btn" href="#">Warhammer fantasy</a>
             <a class="drop-btn" id="star-wars-btn" href="#">Star Wars Coming</a>
           </section>
-        </nav>
+        </section>
         <button class="nav-btn">Credit</button>
-    </header>
+    </nav>
     <!-- ---
     * Main *
     ----- -->
@@ -45,7 +48,10 @@
       <!--
         * Result for rolling dice *
       -->
-      <section id="dice-result"></section>
+      <section id="dice-result">
+        <p>Dice:</p>
+        <p>Dice roll:</p>
+      </section>
       <!-- -----------------
         * Your roll choice *
         ---------------- -->
@@ -57,8 +63,8 @@
         <h2>Roll your attack skill</h2>
         <label for="attack-skill">Your Skill</label>
         <input type="number" id="attack-skill" name="attack-skill" min="1" max="200">
-        <div id="result-attack">
-        </div>
+        <section id="result-attack">
+        </section>
         <button class="roll-btn" id="attack-btn">Roll Attack</button>
         </aside>
         <!--
@@ -70,8 +76,8 @@
           <input type="number" id="defense-skill" name="defense-skill" min="1" max="200">
           <label for="toughness-skill">Toughness skill</label>
           <input type="number" id="toughness-skill" name="toughness-skill" min="1" max="200">
-          <div id="result-defense">
-        </div>
+          <section id="result-defense">
+        </section>
           <button class="roll-btn" id="defense-btn">Roll defense</button>
         </aside>
       </section>

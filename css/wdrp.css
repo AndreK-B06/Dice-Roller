@@ -9,11 +9,11 @@
 :root {
   /* --text: #b2dafa; */
   --Text: #270722;
-  --Background-dice: #f6edd087;
-  --Background: #270722;
+  --Background-dice: #d0ba72b5;
+  --Background: #262626;
   --Text-hover: #d7dedc;
-  --Btn-Background: #ff8552;
-  --Btn-Hover: #5b2f1c;
+  --Btn-Background: #06aea3;
+  --Btn-Hover: #02645e;
 }
 /* -------
 * Colors *
@@ -31,6 +31,9 @@ body {
   color: var(--Text);
   transition: 0.5s;
 }
+input[type="checkbox"]:checked {
+  accent-color: var(--Btn-Background);
+}
 /* Dropdown and buttons hover colers */
 .nav-btn:hover,
 #roleplays-btn:hover,
@@ -45,14 +48,15 @@ main {
   color: var(--Text);
   background-color: var(--Background-dice);
 }
-
-body {
-}
 /* ---------------
 * Body and general *
 ------------------ */
+
+/* ----
+* Nav *
+----- */
 body,
-header,
+nav,
 main,
 #dices, /* skill-comtainer */
 aside,
@@ -66,13 +70,13 @@ body {
   padding: 10px 50px;
 }
 
-header {
+nav {
   max-width: 100%;
 }
-header,
+nav,
 .nav.btn,
 .roll-btn {
-  margin-top: 10px;
+  margin: 10px 0px;
 }
 .dice-input {
   width: 30px;
@@ -98,7 +102,6 @@ header,
   border: none;
 }
 .nav-btn,
-.roll-btn,
 #roleplays-btn {
   border-radius: 5px;
 }
@@ -108,6 +111,14 @@ main {
 .dropdown {
   position: relative;
   display: inline-block;
+}
+input {
+  margin: 10px 0px;
+  padding: 5px 10px;
+  box-shadow: -2px 2px 5px var(--Background);
+  border: none;
+}
+input:active {
 }
 /* ----
 * Text *
@@ -119,7 +130,9 @@ main {
 }
 .dice-lable {
   font-size: 30px;
-  font-weight: bold;
+  font-family: "Mitr", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   letter-spacing: 1px;
 }
 .dropdown-content,
@@ -133,7 +146,7 @@ main {
 ------------------- */
 /* Flex */
 body,
-header,
+nav,
 main,
 #dices, /* skill-comtainer */
 aside,
@@ -158,7 +171,11 @@ aside {
 .roll-btn {
   margin-top: 10px;
   margin-bottom: 20px;
+  padding: 15px 20px;
+  box-shadow: -2px 2px 10px 1px var(--Background) inset;
+  border-radius: 3px;
 }
+
 main {
   justify-content: center;
   align-items: center;
@@ -197,13 +214,29 @@ footer {
 .dropdown-content a {
   display: block;
 }
+/* ---------------
+* Screen sizes *
+----------------- */
+@media screen and (max-width: 375px) {
+  nav {
+    flex-direction: column;
+  }
+  .nav-btn {
+    margin: 10px 0px;
+  }
+}
+@media screen and (min-width: 425px) {
+  nav {
+    flex-direction: row;
+  }
+}
 @media screen and (min-width: 768px) {
-  main {
-    width: 50%;
+  nav {
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1024px) {
-  main {
-    width: 70%;
+  nav {
+    flex-direction: row;
   }
 }

@@ -88,7 +88,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // ! Small problem if the second number is 0 !
     //
     function sumOfAttack() {
-      // ?Starting to peeper if dice first number matches input first number //
+      //
+      // ? Starting to peeper if dice first number matches input first number //
+      //
       let inputFirstDigit = parseInt(inputAttack.value.toString()[0]);
       let currentFirstDigit = parseInt(currentResult.toString()[0]);
       let lastDigit = currentResult % 10;
@@ -157,7 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //
   function makeP(success, diceVal) {
     if (diceVal > inputAttack.value) {
-      success = success - 1;
       successesLevels.textContent = `Dice: - ${success} Failed Levels`;
       result.appendChild(successesLevels);
       showRoll.textContent = `Dice roll: ${diceVal}`;
