@@ -3,9 +3,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
-/* ----
-* Root *
------- */
+/* -------
+* Colors Start *
+-------- */
 :root {
   --Text: #270722;
   --Background-dice: #8e8e8eb5;
@@ -14,9 +14,6 @@
   --Btn-Background: #06aea3;
   --Btn-Hover: #02645e;
 }
-/* -------
-* Colors Start *
--------- */
 body {
   background-color: var(--Background);
   color: var(--Text);
@@ -219,14 +216,6 @@ input {
 
 /* ------------
 * Main End *
-* Footer Start *
-------------- */
-footer {
-  margin: auto;
-}
-
-/* -----------
-* Footer End *
 * Hover Start *
 ------------ */
 
