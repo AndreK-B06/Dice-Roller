@@ -213,16 +213,8 @@ main {
     flex-direction: row;
   }
 }
-@media screen and (min-width: 768px) {
-  nav {
-    flex-direction: row;
-  }
-}
 @media screen and (min-width: 1024px) {
   main {
     width: 40%;
-  }
-  nav {
-    flex-direction: row;
   }
 }
