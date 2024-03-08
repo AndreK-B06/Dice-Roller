@@ -6,7 +6,7 @@
 
 - **Nav**
 
-- **Maine**
+- **Main**
 
 <hr>
 
@@ -30,4 +30,4 @@
 
 ## Js:
 
-Coming Sune
+Coming Soon
