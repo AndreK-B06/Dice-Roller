@@ -1,6 +1,8 @@
-I splitet my code to secsions hers the secsions:
+#I splitet my code to secsions hers the secsions:
 
-HTML:
+--------------
+
+## HTML:
 
 * Nav *
 
@@ -8,7 +10,7 @@ HTML:
 
 -------------
 
-CSS :
+## CSS :
 
 * Colors *
 
@@ -24,8 +26,8 @@ CSS :
 
 * Screen Sizes *
 
-##Test
+------------------
 
-Js:
+## Js:
 
 Coming Sune
