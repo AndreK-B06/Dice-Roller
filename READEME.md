@@ -1,14 +1,16 @@
-I splitet my code to secsions hers the secsions:
+# I splitet my code to secsions hers the secsions:
 
-HTML:
+--------------
+
+## HTML:
 
 * Nav *
 
 * Maine *
 
-<Hr>
+-------------
 
-CSS :
+## CSS :
 
 * Colors *
 
@@ -24,8 +26,8 @@ CSS :
 
 * Screen Sizes *
 
-<hr>
+------------------
 
-Js:
+## Js:
 
 Coming Sune
