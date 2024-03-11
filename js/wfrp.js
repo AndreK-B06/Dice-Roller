@@ -63,17 +63,17 @@ document.addEventListener("DOMContentLoaded", function () {
       //
       // * if non is checked *//
       //
-    } else if (diceHundred.checked && diceTen.checked) {
+    } else if (!diceHundred.checked && !diceTen.checked) {
       result.innerHTML = "";
       rolledDiceHundred = Math.floor(Math.random() * sidesOnDiceHundred) + 1;
       successesLevels.textContent = `Result: ${rolledDiceHundred}. showing d100`;
       result.appendChild(successesLevels);
-      console.log(rolledDiceHundred);
+      console.log("Please check the checkbox before rolling");
 
       sumOfAttack();
     } else {
       result.innerHTML = "";
-      showRoll.textContent = `Dice roll: ${currentResult}`;
+      showRoll.textContent = `Dice roll: ${currentResult} Please check the checkbox before rolling`;
       successesLevels.textContent = `Result: 0`;
       result.appendChild(showRoll);
       result.appendChild(successesLevels);
