@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 /* ----
 * Root *
@@ -83,8 +84,7 @@ h1 {
 /* * Flex * */
 body,
 nav,
-main,
-footer {
+main {
   display: flex;
 }
 
@@ -209,12 +209,16 @@ main {
   }
 }
 @media screen and (min-width: 425px) {
+  main {
+    width: 40%;
+  }
   nav {
     flex-direction: row;
   }
 }
+
 @media screen and (min-width: 1024px) {
   main {
-    width: 40%;
+    width: 50%;
   }
 }
