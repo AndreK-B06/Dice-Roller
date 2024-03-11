@@ -1,19 +1,18 @@
-# This is a dice roller that simplifies the calculation of the roll if you are playing Roleplay games.
-# This is perfect for you ho is new for Role Play or just dont wont to calculate the amount you get.
+### This is a dice roller that simplifies the calculation of the roll if you are playing Roleplay games.<br> This is perfect for you who is new to Role Play or just dont wont to calculate the amount you get.
 
 <hr>
 
 # Known issues
 
-- **Warhammer Fantasy Faile levels is not calculatet properli**
+- **Warhammer Fantasy Fail levels is not calculatet properly**
 
 - **Padding on the dropdown is to close**
 
-- **media quarts is not working properly on the different screen sizes**
+- **media queries is not working properly on the different screen sizes**
 
 - **D10 don't work properly**
 
-# Some features like "credits" and "DnD" is still a work in progress and don't work. Home page will get a update in the near future so it is not so empty.
+### Some features like "credits" and "DnD" is still a work in progress and don't work.<br> Home page will get a update in the near future so it is not so empty.
 
   <hr>
 
