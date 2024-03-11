@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // * Define pages *//
   const indexPage = document.querySelector("#index-btn");
   const warhammerFantasy = document.querySelector("#wfrp-btn");
-  const dungeonsAndDragons = document.querySelector("#dnd.btn");
+  const dungeonsAndDragons = document.querySelector("#dnd-btn");
 
   // * Page switchers *//
   indexPage.addEventListener("click", function () {

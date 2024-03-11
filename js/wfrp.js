@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   //
+  // * Define pages *//
+  //
+  const indexPage = document.querySelector("#index-btn");
+  const warhammerFantasy = document.querySelector("#wfrp-btn");
+  const dungeonsAndDragons = document.querySelector("#dnd-btn");
+  console.log(warhammerFantasy);
+  //
   // * Get Element from Html *//
   //
   let diceTen = document.querySelector("#dice10");
@@ -21,13 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //
   let successesLevels = document.createElement("p");
   let showRoll = document.createElement("p");
-
-  //
-  // * Define pages *//
-  //
-  const indexPage = document.querySelector("#index-btn");
-  const warhammerFantasy = document.querySelector("#wfrp-btn");
-  console.log(warhammerFantasy);
   //
   // * Dices function *//
   //
@@ -185,5 +185,8 @@ document.addEventListener("DOMContentLoaded", function () {
     location.href = "./wfrp.html";
   });
 
+  dungeonsAndDragons.addEventListener("click", function () {
+    location.href = "./dnd.html";
+  });
   console.log("jsLoaded");
 });
