@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
       currentResult = rolledTen;
       sumOfAttack();
       //
-      // * if non is checked *//
       //
     } else if (!diceHundred.checked && !diceTen.checked) {
       result.innerHTML = "";
@@ -101,25 +100,26 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (lastDigit < inputAttack.value % 10) {
           console.log("Win");
         }
-        //
-        // * if you fail the checked *//
-        //
-        if (currentResult > inputAttack.value) {
-          result.innerHTML = "";
-          let failed = currentResult - inputAttack.value;
-          numberLoss += failed;
-          for (let i = 0; i < inputAttack.value; i++) {
-            if (numberLoss > 0) {
-              numberLoss -= 10;
-              console.log(`calculate current value Loss ${numberLoss}`);
-              success++;
-            } else {
-              makeP(success, rolledDiceHundred);
-              console.log(`- ${success} Failed Levels`);
-              success = 0;
-              numberLoss = 0;
-              break;
-            }
+      }
+      //
+      // * if you fail the checked *//
+      //
+      if (currentResult > inputAttack.value) {
+        result.innerHTML = "";
+        let failed = currentResult - inputAttack.value;
+        console.log(failed);
+        numberLoss += failed;
+        for (let i = 0; i < inputAttack.value; i++) {
+          if (numberLoss > 0) {
+            numberLoss -= 10;
+            console.log(`calculate current value Loss ${numberLoss}`);
+            success++;
+          } else {
+            makeP(success, rolledDiceHundred);
+            console.log(`- ${success} Failed Levels`);
+            success = 0;
+            numberLoss = 0;
+            break;
           }
         }
       }
@@ -147,11 +147,12 @@ document.addEventListener("DOMContentLoaded", function () {
         //
         // * if you 0 Successes Levels *//
         //
-      } else {
-        console.log("0 SL");
-        result.innerHTML = "";
-        makeP(success, rolledDiceHundred);
       }
+      // else {
+      //   console.log("0 SL");
+      //   result.innerHTML = "";
+      //   makeP(success, rolledDiceHundred);
+      // }
     }
   });
   //
@@ -163,15 +164,18 @@ document.addEventListener("DOMContentLoaded", function () {
       result.appendChild(successesLevels);
       showRoll.textContent = `Dice roll: ${diceVal}`;
       result.appendChild(showRoll);
+      console.log("Failed Level");
     } else if (diceVal < inputAttack.value) {
       successesLevels.textContent = `Dice: ${success} Successes Levels`;
       result.appendChild(successesLevels);
       showRoll.textContent = `Dice roll: ${diceVal}`;
       result.appendChild(showRoll);
+      console.log("Successes Level");
     } else {
       successesLevels.textContent = `Dice: ${success} Non Levels`;
       result.appendChild(successesLevels);
       showRoll.textContent = `Dice roll: ${diceVal}`;
+      console.log("Non Levels");
     }
   }
   //
