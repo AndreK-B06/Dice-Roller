@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // * if you 0 Levels *//
         //
       } else {
-        console.log("0 SL");
+        console.log("0 Levels");
         result.innerHTML = "";
       }
     }
