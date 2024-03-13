@@ -88,20 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //
     function sumOfAttack() {
       //
-      // ? Starting to peeper if dice first number matches input first number //
-      //
-      let inputFirstDigit = parseInt(inputAttack.value.toString()[0]);
-      let currentFirstDigit = parseInt(currentResult.toString()[0]);
-      let lastDigit = currentResult % 10;
-      //
-      if (inputFirstDigit === currentFirstDigit) {
-        if (lastDigit > inputAttack.value % 10) {
-          console.log("Loss");
-        } else if (lastDigit < inputAttack.value % 10) {
-          console.log("Win");
-        }
-      }
-      //
       // * if you fail the checked *//
       //
       if (currentResult > inputAttack.value) {
@@ -145,14 +131,12 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
         //
-        // * if you 0 Successes Levels *//
+        // * if you 0 Levels *//
         //
+      } else {
+        console.log("0 SL");
+        result.innerHTML = "";
       }
-      // else {
-      //   console.log("0 SL");
-      //   result.innerHTML = "";
-      //   makeP(success, rolledDiceHundred);
-      // }
     }
   });
   //
