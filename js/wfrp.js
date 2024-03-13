@@ -61,19 +61,18 @@ document.addEventListener("DOMContentLoaded", function () {
       currentResult = rolledTen;
       sumOfAttack();
       //
-      // * if non is checked *//
       //
-    } else if (diceHundred.checked && diceTen.checked) {
+    } else if (!diceHundred.checked && !diceTen.checked) {
       result.innerHTML = "";
       rolledDiceHundred = Math.floor(Math.random() * sidesOnDiceHundred) + 1;
       successesLevels.textContent = `Result: ${rolledDiceHundred}. showing d100`;
       result.appendChild(successesLevels);
-      console.log(rolledDiceHundred);
+      console.log("Please check the checkbox before rolling");
 
       sumOfAttack();
     } else {
       result.innerHTML = "";
-      showRoll.textContent = `Dice roll: ${currentResult}`;
+      showRoll.textContent = `Dice roll: ${currentResult} Please check the checkbox before rolling`;
       successesLevels.textContent = `Result: 0`;
       result.appendChild(showRoll);
       result.appendChild(successesLevels);
@@ -89,37 +88,24 @@ document.addEventListener("DOMContentLoaded", function () {
     //
     function sumOfAttack() {
       //
-      // ? Starting to peeper if dice first number matches input first number //
+      // * if you fail the checked *//
       //
-      let inputFirstDigit = parseInt(inputAttack.value.toString()[0]);
-      let currentFirstDigit = parseInt(currentResult.toString()[0]);
-      let lastDigit = currentResult % 10;
-      //
-      if (inputFirstDigit === currentFirstDigit) {
-        if (lastDigit > inputAttack.value % 10) {
-          console.log("Loss");
-        } else if (lastDigit < inputAttack.value % 10) {
-          console.log("Win");
-        }
-        //
-        // * if you fail the checked *//
-        //
-        if (currentResult > inputAttack.value) {
-          result.innerHTML = "";
-          let failed = currentResult - inputAttack.value;
-          numberLoss += failed;
-          for (let i = 0; i < inputAttack.value; i++) {
-            if (numberLoss > 0) {
-              numberLoss -= 10;
-              console.log(`calculate current value Loss ${numberLoss}`);
-              success++;
-            } else {
-              makeP(success, rolledDiceHundred);
-              console.log(`- ${success} Failed Levels`);
-              success = 0;
-              numberLoss = 0;
-              break;
-            }
+      if (currentResult > inputAttack.value) {
+        result.innerHTML = "";
+        let failed = currentResult - inputAttack.value;
+        console.log(failed);
+        numberLoss += failed;
+        for (let i = 0; i < inputAttack.value; i++) {
+          if (numberLoss > 0) {
+            numberLoss -= 10;
+            console.log(`calculate current value Loss ${numberLoss}`);
+            success++;
+          } else {
+            makeP(success, rolledDiceHundred);
+            console.log(`- ${success} Failed Levels`);
+            success = 0;
+            numberLoss = 0;
+            break;
           }
         }
       }
@@ -145,12 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
         //
-        // * if you 0 Successes Levels *//
+        // * if you 0 Levels *//
         //
       } else {
-        console.log("0 SL");
+        console.log("0 Levels");
         result.innerHTML = "";
-        makeP(success, rolledDiceHundred);
       }
     }
   });
@@ -163,15 +148,18 @@ document.addEventListener("DOMContentLoaded", function () {
       result.appendChild(successesLevels);
       showRoll.textContent = `Dice roll: ${diceVal}`;
       result.appendChild(showRoll);
+      console.log("Failed Level");
     } else if (diceVal < inputAttack.value) {
       successesLevels.textContent = `Dice: ${success} Successes Levels`;
       result.appendChild(successesLevels);
       showRoll.textContent = `Dice roll: ${diceVal}`;
       result.appendChild(showRoll);
+      console.log("Successes Level");
     } else {
       successesLevels.textContent = `Dice: ${success} Non Levels`;
       result.appendChild(successesLevels);
       showRoll.textContent = `Dice roll: ${diceVal}`;
+      console.log("Non Levels");
     }
   }
   //
