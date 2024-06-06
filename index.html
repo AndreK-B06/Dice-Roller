@@ -11,27 +11,29 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="icon" type="image/png" href="images/GrenDice.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <script type="module" src="./js/index.js"></script>
     <title>Dice Roller</title>
   </head>
-  <body>
-    <!-- --
-    * nav *
-    --- -->
-    <nav>
+
+  <body class="column">
+    <nav class="row nav-cont">
       <button class="nav-btn" id="index-btn">Home</button>
+
       <section class="dropdown">
-        <button class="drop-btn" id="roleplays-btn">Roleplays</button>
+        <button class="drop-btn nav-btn" id="roleplays-btn">Roleplays</button>
+
         <section class="dropdown-content">
           <a class="drop-btn" id="wfrp-btn" href="#">Warhammer fantasy</a>
           <a class="drop-btn" id="dnd-btn" href="#">DnD Coming</a>
         </section>
       </section>
-      <button class="nav-btn">Credit Coming</button>
+
+      <button class="nav-btn" id="btn-credits">Credit Coming</button>
     </nav>
-    <!-- Main -->
-    <main>
+
+    <main class="column main-cont">
       <h1>Welcome</h1>
     </main>
   </body>
