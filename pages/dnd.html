@@ -3,37 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/dnd.css" />
     <link rel="icon" type="image/png" href="images/GrenDice.png" />
     <script type="module" src="../js/dnd.js"></script>
     <title>Dice Roller Dungeons And Dragons</title>
   </head>
-  <body>
-    <!-- --
-    * nav *
-    --- -->
-    <nav>
+  <body class="column">
+    <nav class="row nav-cont">
       <button class="nav-btn" id="index-btn">Home</button>
-      <section class="dropdown">
-        <button class="drop-btn" id="roleplays-btn">Roleplays</button>
+
+      <section class="dropdown nav-btn">
+        <button class="drop-btn-main nav-btn" id="roleplays-btn">
+          Roleplays
+        </button>
+
         <section class="dropdown-content">
           <a class="drop-btn" id="wfrp-btn" href="#">Warhammer fantasy</a>
           <a class="drop-btn" id="dnd-btn" href="#">DnD Coming</a>
         </section>
       </section>
+
       <button class="nav-btn" id="btn-credits">Credit Coming</button>
     </nav>
-    <!-- ---
-    * Main *
-    ----- -->
-    <main class="flex">
+
+    <main class="column main-cont">
       <!-- ------
     * Dices *
      ----- -->

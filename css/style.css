@@ -37,7 +37,7 @@ a {
 }
 
 .nav-btn {
-  height: 87%;
+  min-height: 87%;
   width: 125px;
   border-radius: 10px;
   border: none;
@@ -46,6 +46,11 @@ a {
   font-size: 22px;
   color: rgb(211, 198, 198);
 }
+#roleplays-btn {
+  justify-content: center;
+  font-size: 22px;
+}
+
 .nav-btn:hover {
   background-color: var(--Btn-Hover);
   color: rgb(224, 206, 206);
@@ -60,10 +65,12 @@ a {
   border-radius: 10px;
   width: 60%;
   height: 80%;
+  padding: 20px;
   margin: 20px 0 0 0;
   text-align: center;
   background-color: var(--Background-dice);
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -88,5 +95,11 @@ a {
 .drop-btn {
   background-color: var(--Btn-Background);
   min-height: 30px;
+  font-size: 16px;
+}
+
+.drop-btn-main {
+  background-color: var(--Btn-Background);
+
   font-size: 16px;
 }
