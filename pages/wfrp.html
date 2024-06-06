@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/wdrp.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="images/GrenDice.png" />
+        <script type="module" src="../js/wfrp.js"></script>
+    <title>Dice Roller Warhammer fantasy</title>
+  </head>
+  <body class="column">
+
+   <nav class="row nav-cont">
+      <button class="nav-btn" id="index-btn">Home</button>
+
+      <section class="dropdown">
+        <button class="drop-btn nav-btn" id="roleplays-btn">Roleplays</button>
+
+        <section class="dropdown-content">
+          <a class="drop-btn" id="wfrp-btn" href="#">Warhammer fantasy</a>
+          <a class="drop-btn" id="dnd-btn" href="#">DnD Coming</a>
+        </section>
+      </section>
+
+      <button class="nav-btn" id="btn-credits">Credit Coming</button>
+    </nav>
+  
+    <main class="column main-cont">
+      
+      <section class="flex" id="dice-container">
+        
+        <input type="checkbox" id="dice10" class="dice-checkbox" name="dice10" value="D10" />
+        <label class="dice-label" for="dice10">D10</label></br>
+       
+        <input type="checkbox" id="dice100" class="dice-checkbox" name="dice100" value="D100" />
+        <label class="dice-label" for="dice100">D100</label></br>
+      </section>
+     
+      <section id="dice-result">
+        <p>Dice:</p>
+        <p>Dice roll:</p>
+     
+      </section>
+    
+      <section class="flex" id="skill-comtainer">
+    
+        <aside class="flex">
+        <h2>Roll your attack skill</h2>
+        <label for="attack-skill">Your Skill</label>
+        <input type="number" id="attack-skill" name="attack-skill" min="1" max="200">
+        <section id="result-attack">
+        </section>
+        <button class="roll-btn" id="attack-btn">Roll Attack</button>
+        </aside>
+       
+       
+      </section>
+      </main>
+  </body>
+</html>
