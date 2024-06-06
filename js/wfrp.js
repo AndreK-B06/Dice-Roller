@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const indexPage = document.querySelector("#index-btn");
   const warhammerFantasy = document.querySelector("#wfrp-btn");
   const dungeonsAndDragons = document.querySelector("#dnd-btn");
+  const creditsPage = document.querySelector("#btn-credits");
   console.log(warhammerFantasy);
   //
   // * Get Element from Html *//
@@ -166,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // * Page switchers *//
   //
   indexPage.addEventListener("click", function () {
-    location.href = "./index.html";
+    location.href = "../index.html";
   });
 
   warhammerFantasy.addEventListener("click", function () {
@@ -176,5 +177,10 @@ document.addEventListener("DOMContentLoaded", function () {
   dungeonsAndDragons.addEventListener("click", function () {
     location.href = "./dnd.html";
   });
+
+  creditsPage.addEventListener("click", function () {
+    location.href = "./credits.html";
+  });
+
   console.log("jsLoaded");
 });
