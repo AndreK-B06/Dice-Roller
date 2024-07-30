@@ -1,0 +1,13 @@
+main {
+  align-items: center;
+}
+.marg-top {
+  margin-top: 3rem;
+}
+
+ul {
+  margin-top: 3rem;
+  width: 20rem;
+  text-align: start;
+  font-size: 2rem;
+}
