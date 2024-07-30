@@ -1,13 +1,11 @@
 main {
   align-items: center;
 }
-aside {
-  margin-top: 3rem;
-  width: 20rem;
-}
 .marg-top {
   margin-top: 3rem;
 }
 ul {
+  margin-top: 3rem;
+  width: 20rem;
   text-align: start;
 }
