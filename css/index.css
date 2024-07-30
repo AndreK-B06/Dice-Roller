@@ -5,6 +5,9 @@ aside {
   margin-top: 3rem;
   width: 20rem;
 }
-h1 {
-  margin-top: 2rem;
+.marg-top {
+  margin-top: 3rem;
+}
+ul {
+  text-align: start;
 }
