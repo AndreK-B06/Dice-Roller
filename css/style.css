@@ -1,5 +1,5 @@
 :root {
-  --Text: #270722;
+  --Text-DM: #270722;
   --Background-dice: #8e8e8eb5;
   --Background: #262626;
   --Text-hover: #d7dedc;
@@ -16,7 +16,7 @@
 
 body {
   background-color: var(--Background);
-  color: var(--Text);
+  color: var(--Text-DM);
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: var(--Text);
+  color: var(--Text-DM);
 }
 
 .column {
@@ -44,7 +44,7 @@ a {
   background-color: var(--Btn-Background);
   cursor: pointer;
   font-size: 22px;
-  color: rgb(211, 198, 198);
+  color: var(--Text-DM);
 }
 #roleplays-btn {
   justify-content: center;
